@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import ReactCursorPosition from 'react-cursor-position';
+import Hero from '../components/Hero/Hero';
 import Header from '../components/Layouts/Header';
+import Layout from '../components/Layouts/Layout';
 
 const LogoSrc = (
   <svg width="107px" height="33px" viewBox="0 0 107 33" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +43,17 @@ const IndexPage = () => {
 
   return (
     <>
-      <Header logoSource={LogoSrc} toggleMenu={toggleMenu} headerToggler={headerToggler} />
+      <Layout>
+        <Header logoSource={LogoSrc} toggleMenu={toggleMenu} headerToggler={headerToggler} />
+        <main
+          // className={toggleMenu ? 'content-2 open' : 'content-2'}
+          className="content-2 open"
+        >
+          <ReactCursorPosition>
+            <Hero />
+          </ReactCursorPosition>
+        </main>
+      </Layout>
     </>
   );
 };
