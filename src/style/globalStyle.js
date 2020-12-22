@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   section {
     background: ${themeGet('color.dark', '#353353')};
+    padding-top: 110px;
   }
 
   .content {

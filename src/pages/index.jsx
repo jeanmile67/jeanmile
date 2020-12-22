@@ -4,6 +4,7 @@ import About from '../components/About/About';
 import Hero from '../components/Hero/Hero';
 import Header from '../components/Layouts/Header';
 import Layout from '../components/Layouts/Layout';
+import ServicesGrid from '../components/ServiceGrid/ServicesGrid';
 
 const LogoSrc = (
   <svg width="107px" height="33px" viewBox="0 0 107 33" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +52,7 @@ const IndexPage = () => {
             <Hero />
           </ReactCursorPosition>
           <About />
+          <ServicesGrid />
         </main>
       </Layout>
     </>
