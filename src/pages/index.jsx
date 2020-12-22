@@ -45,10 +45,7 @@ const IndexPage = () => {
     <>
       <Layout>
         <Header logoSource={LogoSrc} toggleMenu={toggleMenu} headerToggler={headerToggler} />
-        <main
-          // className={toggleMenu ? 'content-2 open' : 'content-2'}
-          className="content-2 open"
-        >
+        <main className={toggleMenu ? 'content open' : 'content'}>
           <ReactCursorPosition>
             <Hero />
           </ReactCursorPosition>
