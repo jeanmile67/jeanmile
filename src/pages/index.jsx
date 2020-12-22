@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import ReactCursorPosition from 'react-cursor-position';
 import About from '../components/About/About';
+import Experiences from '../components/Experiences/Experiences';
 import Hero from '../components/Hero/Hero';
 import Header from '../components/Layouts/Header';
 import Layout from '../components/Layouts/Layout';
 import ServicesGrid from '../components/ServiceGrid/ServicesGrid';
+import PageMetadata from '../components/global/PageMetaData';
 
 const LogoSrc = (
   <svg width="107px" height="33px" viewBox="0 0 107 33" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -45,6 +47,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <PageMetadata />
       <Layout>
         <Header logoSource={LogoSrc} toggleMenu={toggleMenu} headerToggler={headerToggler} />
         <main className={toggleMenu ? 'content open' : 'content'}>
@@ -53,6 +56,8 @@ const IndexPage = () => {
           </ReactCursorPosition>
           <About />
           <ServicesGrid />
+          <Experiences />
+          <About />
         </main>
       </Layout>
     </>

@@ -5,14 +5,12 @@ import GlobalStyle from '../../style/globalStyle';
 import typography from '../../utils/typography';
 import defaultTheme from '../../theme/defaultTheme';
 
-const Layout = ({ children }) => {
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <TypographyStyle typography={typography} />
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
-  );
-};
+const Layout = ({ children }) => (
+  <ThemeProvider theme={defaultTheme}>
+    <TypographyStyle typography={typography} />
+    <GlobalStyle />
+    {children}
+  </ThemeProvider>
+);
 
 export default Layout;

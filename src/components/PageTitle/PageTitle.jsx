@@ -22,15 +22,13 @@ const SectionTitle = styled.h2`
   }
 `;
 
-const PageTitle = ({ title }) => {
-  return (
-    <>
-      <ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={true}>
-        <SectionTitle className="section-title">{title}</SectionTitle>
-      </ScrollAnimation>
-      <div className="spacer" data-height="60"></div>
-    </>
-  );
-};
+const PageTitle = ({ title }) => (
+  <>
+    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce>
+      <SectionTitle className="section-title">{title}</SectionTitle>
+    </ScrollAnimation>
+    <div className="spacer" data-height="60" />
+  </>
+);
 
 export default PageTitle;

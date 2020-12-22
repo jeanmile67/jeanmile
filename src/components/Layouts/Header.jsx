@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { Award, Briefcase, Edit, Home, Layers, MessageCircle, UserCheck } from 'react-feather';
 import HeaderWrapper from './Header.style';
-import Logo from '../Logo';
+import Logo from '../global/Logo';
 
 const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
   const handleClasses = () => {
