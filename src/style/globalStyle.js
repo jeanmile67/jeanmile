@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: #5E5C7F;
-    background-color: #F9F9FF;
+    color: ${themeGet('color.white', '#fff')}
+    background: ${themeGet('color.dark', '#353353')};
     line-height: 1.7;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
