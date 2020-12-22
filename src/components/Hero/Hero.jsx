@@ -1,8 +1,8 @@
 import React from 'react';
 import Typed from 'react-typed';
 import { Link } from 'react-scroll';
-import HeroWrapper from './Hero.style';
 import { Dribbble, Facebook, Instagram, Twitter } from 'react-feather';
+import HeroWrapper from './Hero.style';
 import StyledButton from '../global/StyledButton';
 
 const Hero = (props) => {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactCursorPosition from 'react-cursor-position';
+import About from '../components/About/About';
 import Hero from '../components/Hero/Hero';
 import Header from '../components/Layouts/Header';
 import Layout from '../components/Layouts/Layout';
@@ -49,6 +50,7 @@ const IndexPage = () => {
           <ReactCursorPosition>
             <Hero />
           </ReactCursorPosition>
+          <About />
         </main>
       </Layout>
     </>

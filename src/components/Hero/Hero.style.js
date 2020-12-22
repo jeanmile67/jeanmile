@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const HeroWrapper = styled.section`
-  background: ${themeGet('color.dark', '#353353')};
   padding: 0;
   height: 100vh;
   min-height: 100vh;
@@ -43,18 +42,6 @@ const HeroWrapper = styled.section`
       a {
         color: ${themeGet('color.white', '#ffffff')};
       }
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 920px;
-    }
-  }
-
-  @media (min-width: 1366px) {
-    .container {
-      max-width: 1080px;
     }
   }
 
