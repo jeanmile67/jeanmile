@@ -3,6 +3,7 @@ import Typed from 'react-typed';
 import { Link } from 'react-scroll';
 import HeroWrapper from './Hero.style';
 import { Dribbble, Facebook, Instagram, Twitter } from 'react-feather';
+import StyledButton from '../global/StyledButton';
 
 const Hero = (props) => {
   const { x, y } = props.position;
@@ -62,9 +63,7 @@ const Hero = (props) => {
           </ul>
 
           <div className="mt-4">
-            <Link className="btn btn-default" to="section-contact" spy={true} smooth={true} duration={500}>
-              Hire me
-            </Link>
+            <StyledButton msg="Hire me" />
           </div>
         </div>
 
