@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
+import { Award, Briefcase } from 'react-feather';
 import PageTitle from '../PageTitle/PageTitle';
-import ExperiencesWrapper, { TimelineWrapper } from './Experiences.style';
-import Timeline from './Timeline';
+import Timeline from '../Timeline/Timeline';
+import ExperiencesWrapper from './Experiences.style';
 
 const educationData = [
   {
@@ -52,22 +53,13 @@ const Experiences = () => (
       <PageTitle title="Experience" />
       <Row>
         <Col md={6}>
-          <TimelineWrapper className=" edu bg-white rounded shadow-dark padding-30 overflow-hidden">
-            {educationData.map((education) => (
-              <Timeline key={education.id} education={education} />
-            ))}
-            <span className="line" />
-          </TimelineWrapper>
+          <div className="spacer d-md-none d-lg-none" data-height="30" />
+          <Timeline items={educationData} icon={<Award size={30} />} />
         </Col>
 
         <Col md={6}>
           <div className="spacer d-md-none d-lg-none" data-height="30" />
-          <TimelineWrapper className=" exp bg-white rounded shadow-dark padding-30 overflow-hidden">
-            {experienceData.map((experience) => (
-              <Timeline key={experience.id} education={experience} />
-            ))}
-            <span className="line" />
-          </TimelineWrapper>
+          <Timeline items={experienceData} icon={<Briefcase size={30} />} />
         </Col>
       </Row>
     </Container>
