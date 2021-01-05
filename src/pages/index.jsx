@@ -9,6 +9,7 @@ import ServicesGrid from '../components/ServiceGrid/ServicesGrid';
 import PageMetadata from '../components/global/PageMetaData';
 import ContactMe from '../components/ContactMe/ContactMe';
 import Works from '../components/Works/Works';
+import Technology from '../components/Technology/Technology';
 
 const LogoSrc = (
   <svg width="107px" height="33px" viewBox="0 0 107 33" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -60,6 +61,7 @@ const IndexPage = () => {
           <ServicesGrid />
           <Experiences />
           <Works />
+          <Technology />
           <ContactMe />
         </main>
       </Layout>
