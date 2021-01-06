@@ -47,6 +47,7 @@ const HeroWrapper = styled.section`
 
   .parallax {
     position: absolute;
+    margin-left: 290px;
     left: 0;
     top: 0;
     height: 100%;

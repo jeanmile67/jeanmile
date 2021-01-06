@@ -37,27 +37,27 @@ const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
           <ul className="vertical-menu scrollspy">
             <li>
               <Link activeClass="active" to="section-home" spy={true} smooth={true} duration={500}>
-                <Home />
+                <Home /> Home
               </Link>
             </li>
             <li>
               <Link activeClass="active" to="section-about" spy={true} smooth={true} duration={500}>
-                <UserCheck />
+                <UserCheck /> About
               </Link>
             </li>
             <li>
               <Link activeClass="active" to="section-services" spy={true} smooth={true} duration={500}>
-                <Briefcase />
+                <Briefcase /> Services
               </Link>
             </li>
             <li>
               <Link activeClass="active" to="section-experiences" spy={true} smooth={true} duration={500}>
-                <Award />
+                <Award /> Experience
               </Link>
             </li>
             <li>
               <Link activeClass="active" to="section-works" spy={true} smooth={true} duration={500}>
-                <Layers />
+                <Layers /> Works
               </Link>
             </li>
             <li>

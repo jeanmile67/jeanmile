@@ -9,7 +9,7 @@ const Layout = ({ children }) => (
   <ThemeProvider theme={defaultTheme}>
     <TypographyStyle typography={typography} />
     <GlobalStyle />
-    {children}
+    <main>{children}</main>
   </ThemeProvider>
 );
 
