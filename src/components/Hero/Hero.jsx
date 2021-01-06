@@ -1,9 +1,9 @@
 import React from 'react';
 import Typed from 'react-typed';
-import { Link } from 'react-scroll';
 import { Dribbble, Facebook, Instagram, Twitter } from 'react-feather';
-import HeroWrapper from './Hero.style';
+import HeroWrapper, { ScrollDown } from './Hero.style';
 import StyledButton from '../global/StyledButton';
+import ScrollDownMouse from './ScrollDownMouse';
 
 const Hero = (props) => {
   const { x, y } = props.position;
@@ -67,14 +67,9 @@ const Hero = (props) => {
           </div>
         </div>
 
-        <div className="scroll-down">
-          <Link to="section-about" spy={true} smooth={true} duration={500} className="mouse-wrapper">
-            <span>Scroll Down</span>
-            <span className="mouse">
-              <span className="wheel"></span>
-            </span>
-          </Link>
-        </div>
+        <ScrollDown>
+          <ScrollDownMouse />
+        </ScrollDown>
 
         <div className="parallax" data-relative-input="true">
           <svg

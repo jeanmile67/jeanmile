@@ -4,13 +4,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: ${themeGet('color.white', '#fff')}
+    color: ${themeGet('color.white', '#fff')};
     background: ${themeGet('color.dark', '#353353')};
     line-height: 1.7;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  a {
+    color: ${themeGet('color.pink', '#FF4C60')};
+    outline: 0;
+    @include transition(.3s);
+
+    &:hover {
+        color: ${themeGet('color.dark', '#353353')};
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
 
   @media (min-width: 1200px) {
     .container {

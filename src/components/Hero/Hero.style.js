@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 
 const HeroWrapper = styled.section`
+  position: relative;
   padding: 0;
   height: 100vh;
   min-height: 100vh;
@@ -47,7 +48,6 @@ const HeroWrapper = styled.section`
 
   .parallax {
     position: absolute;
-    margin-left: 290px;
     left: 0;
     top: 0;
     height: 100%;
@@ -182,6 +182,14 @@ const HeroWrapper = styled.section`
       }
     }
   }
+`;
+
+export const ScrollDown = styled.div`
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 `;
 
 export default HeroWrapper;
