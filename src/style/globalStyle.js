@@ -18,12 +18,12 @@ const GlobalStyle = createGlobalStyle`
     @include transition(.3s);
 
     &:hover {
-        color: ${themeGet('color.dark', '#353353')};
-        text-decoration: none;
+      color: ${themeGet('color.dark', '#353353')};
+      text-decoration: none;
     }
 
     &:focus {
-        outline: 0;
+      outline: 0;
     }
 }
 

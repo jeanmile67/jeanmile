@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 import { Link } from 'react-scroll';
 
@@ -31,6 +31,23 @@ const Mouse = styled.span`
   position: relative;
   width: 20px;
 `;
+const animouse = keyframes`
+	0% {
+		top: 29%;
+	}
+
+	15% {
+		top: 50%;
+	}
+
+	50% {
+		top: 50%;
+	}
+
+	100% {
+		top: 29%;
+	}
+`;
 
 const Wheel = styled.span`
   background: ${themeGet('color.white', '#fff')};
@@ -42,13 +59,11 @@ const Wheel = styled.span`
   transform: translateX(-50%);
   height: 4px;
   width: 4px;
-  -webkit-animation: ani-mouse 2s linear infinite;
-  -moz-animation: ani-mouse 2s linear infinite;
-  animation: ani-mouse 2s linear infinite;
+  animation: ${animouse} 2s linear infinite;
 `;
 
 const ScrollDownMouse = () => (
-  <MouseWrapper to="section-about" spy smooth duration={500} className="mouse-wrapper">
+  <MouseWrapper to="section-about" spy smooth duration={500}>
     <span>Scroll Down</span>
     <Mouse>
       <Wheel />

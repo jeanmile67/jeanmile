@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Award, Briefcase, Edit, Home, Layers, MessageCircle, UserCheck } from 'react-feather';
+import { Award, Briefcase, Edit, Heart, Home, Layers, MessageCircle, UserCheck } from 'react-feather';
 import HeaderWrapper from './Header.style';
 import Logo from '../global/Logo';
 
@@ -61,20 +61,18 @@ const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
               </Link>
             </li>
             <li>
-              <Link activeClass="active" to="section-blogs" spy={true} smooth={true} duration={500}>
-                <Edit />
-              </Link>
-            </li>
-            <li>
               <Link activeClass="active" to="section-contact" spy={true} smooth={true} duration={500}>
-                <MessageCircle />
+                <MessageCircle /> Contact
               </Link>
             </li>
           </ul>
         </nav>
 
         <div className="footer">
-          <span className="copyright">&copy; {new Date().getFullYear()} Bolby Template.</span>
+          <span className="copyright">
+            Made with
+            <Heart />
+          </span>
         </div>
       </HeaderWrapper>
     </>

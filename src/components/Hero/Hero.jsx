@@ -6,11 +6,12 @@ import StyledButton from '../global/StyledButton';
 import ScrollDownMouse from './ScrollDownMouse';
 
 const Hero = (props) => {
-  const { x, y } = props.position;
-  const { height, width } = props.elementDimensions;
+  const { position, elementDimensions } = props;
+  const { x, y } = position;
+  const { height, width } = elementDimensions;
   const activeParallax = (depth = 15) => {
-    let posX = (width / 2 - x) / depth;
-    let posY = (height / 2 - y) / depth;
+    const posX = (width / 2 - x) / depth;
+    const posY = (height / 2 - y) / depth;
     return {
       transform: `translate(${posX}px, ${posY}px)`,
     };
@@ -30,13 +31,10 @@ const Hero = (props) => {
             I'm a{' '}
             <Typed
               strings={['UI/UX designer ', 'Front-End developer', 'Photography lover']}
-              typeSpeed={80}
+              typeSpeed={70}
               backSpeed={40}
-              attr="value"
               loop
-            >
-              <label value></label>
-            </Typed>
+            />
           </p>
 
           <ul className="social-icons light list-inline mb-0 mt-4">
