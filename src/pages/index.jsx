@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactCursorPosition from 'react-cursor-position';
+import { Element } from 'react-scroll';
 import About from '../components/About/About';
 import Experiences from '../components/Experiences/Experiences';
 import Hero from '../components/Hero/Hero';
@@ -57,12 +58,24 @@ const IndexPage = () => {
           <ReactCursorPosition>
             <Hero />
           </ReactCursorPosition>
-          <About />
-          <ServicesGrid />
-          <Experiences />
-          <Works />
-          <Technology />
-          <ContactMe />
+          <Element name="about">
+            <About />
+          </Element>
+          <Element name="service">
+            <ServicesGrid />
+          </Element>
+          <Element name="experiences">
+            <Experiences />
+          </Element>
+          <Element name="works">
+            <Works />
+          </Element>
+          <Element name="technology">
+            <Technology />
+          </Element>
+          <Element name="contact">
+            <ContactMe />
+          </Element>
         </main>
       </Layout>
     </>

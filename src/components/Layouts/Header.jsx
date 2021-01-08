@@ -36,33 +36,39 @@ const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
         <nav>
           <ul className="vertical-menu scrollspy">
             <li>
-              <Link activeClass="active" to="section-home" spy={true} smooth={true} duration={500}>
-                <Home /> Home
+              <Link activeClass="active" to="home" spy smooth duration={500}>
+                <Home />
+                Home
               </Link>
             </li>
             <li>
-              <Link activeClass="active" to="section-about" spy={true} smooth={true} duration={500}>
-                <UserCheck /> About
+              <Link activeClass="active" to="about" spy smooth duration={500}>
+                <UserCheck />
+                About
               </Link>
             </li>
             <li>
-              <Link activeClass="active" to="section-services" spy={true} smooth={true} duration={500}>
-                <Briefcase /> Services
+              <Link activeClass="active" to="services" spy smooth duration={500}>
+                <Briefcase />
+                Services
               </Link>
             </li>
             <li>
-              <Link activeClass="active" to="section-experiences" spy={true} smooth={true} duration={500}>
-                <Award /> Experience
+              <Link activeClass="active" to="experiences" spy smooth duration={500}>
+                <Award />
+                Experience
               </Link>
             </li>
             <li>
-              <Link activeClass="active" to="section-works" spy={true} smooth={true} duration={500}>
-                <Layers /> Works
+              <Link activeClass="active" to="works" spy smooth duration={500}>
+                <Layers />
+                Works
               </Link>
             </li>
             <li>
-              <Link activeClass="active" to="section-contact" spy={true} smooth={true} duration={500}>
-                <MessageCircle /> Contact
+              <Link activeClass="active" to="contact" spy smooth duration={500}>
+                <MessageCircle />
+                Contact
               </Link>
             </li>
           </ul>

@@ -61,12 +61,12 @@ const Hero = (props) => {
           </ul>
 
           <div className="mt-4">
-            <StyledButton msg="Hire me" />
+            <StyledButton msg="Hire me" scrollTo="contact" />
           </div>
         </div>
 
         <ScrollDown>
-          <ScrollDownMouse />
+          <ScrollDownMouse scrollTo="about" />
         </ScrollDown>
 
         <div className="parallax" data-relative-input="true">

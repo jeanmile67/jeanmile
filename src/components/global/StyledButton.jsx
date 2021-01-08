@@ -1,7 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 import { Link } from 'react-scroll';
+
+const ButtonPush = keyframes`
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+`;
 
 const StyledButtonWrapper = styled(Link)`
   border-radius: 30px;
@@ -22,8 +34,8 @@ const StyledButtonWrapper = styled(Link)`
 
   &:hover {
     color: ${themeGet('color.white', '#fff')};
-    -webkit-animation-name: button-push;
-    animation-name: button-push;
+    -webkit-animation-name: ${ButtonPush};
+    animation-name: ${ButtonPush};
     -webkit-animation-duration: 0.3s;
     animation-duration: 0.3s;
     -webkit-animation-timing-function: linear;
@@ -39,38 +51,12 @@ const StyledButtonWrapper = styled(Link)`
   &:focus {
     outline: 0;
   }
-
-  @keyframes button-push {
-    50% {
-      -webkit-transform: scale(0.8);
-      transform: scale(0.8);
-    }
-
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-  }
-
-  @keyframes hvr-push {
-    50% {
-      -webkit-transform: scale(0.8);
-      transform: scale(0.8);
-    }
-
-    100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-  }
 `;
 
-const StyledButton = ({ msg }) => {
-  return (
-    <StyledButtonWrapper to="section-contact" spy={true} smooth={true} duration={500}>
-      {msg}
-    </StyledButtonWrapper>
-  );
-};
+const StyledButton = ({ scrollTo, msg }) => (
+  <StyledButtonWrapper to={scrollTo} spy smooth duration={500}>
+    {msg}
+  </StyledButtonWrapper>
+);
 
 export default StyledButton;

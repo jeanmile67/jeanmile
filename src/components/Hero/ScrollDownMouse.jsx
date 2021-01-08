@@ -31,7 +31,7 @@ const Mouse = styled.span`
   position: relative;
   width: 20px;
 `;
-const animouse = keyframes`
+const aninMouse = keyframes`
 	0% {
 		top: 29%;
 	}
@@ -59,11 +59,11 @@ const Wheel = styled.span`
   transform: translateX(-50%);
   height: 4px;
   width: 4px;
-  animation: ${animouse} 2s linear infinite;
+  animation: ${aninMouse} 2s linear infinite;
 `;
 
-const ScrollDownMouse = () => (
-  <MouseWrapper to="section-about" spy smooth duration={500}>
+const ScrollDownMouse = ({ scrollTo }) => (
+  <MouseWrapper to={scrollTo} spy smooth duration={500}>
     <span>Scroll Down</span>
     <Mouse>
       <Wheel />
