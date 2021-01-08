@@ -34,6 +34,7 @@ const StyledButtonWrapper = styled(Link)`
 
   &:hover {
     color: ${themeGet('color.white', '#fff')};
+    cursor: pointer;
     -webkit-animation-name: ${ButtonPush};
     animation-name: ${ButtonPush};
     -webkit-animation-duration: 0.3s;

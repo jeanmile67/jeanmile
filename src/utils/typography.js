@@ -3,6 +3,13 @@ import noriegaTheme from 'typography-theme-noriega';
 
 noriegaTheme.headerFontFamily = ['Rubik', 'sans-serif'];
 noriegaTheme.baseFontSize = '17px';
+noriegaTheme.googleFonts = [
+  {
+    name: 'Rubik',
+    styles: ['400', '700'],
+  },
+];
+
 const typography = new Typography(noriegaTheme);
 
 export default typography;

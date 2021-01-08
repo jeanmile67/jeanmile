@@ -39,7 +39,7 @@ const progressData = [
 const counterData = [
   {
     id: 1,
-    title: 'Projects completed',
+    title: 'Projects',
     count: 198,
     icon: <Anchor size={36} />,
   },
@@ -77,36 +77,36 @@ const About = () => (
 
         <Col md={9}>
           <BubbleDialogue className="rounded shadow-dark padding-30">
-            <div className="row">
-              <div className="col-md-6">
+            <Row>
+              <Col md={6}>
                 <p>{aboutContent.content}</p>
                 <div className="mt-3">
                   <StyledButton msg="Download CV" />
                 </div>
                 <div className="spacer d-md-none d-lg-none" data-height="30" />
-              </div>
-              <div className="col-md-6">
+              </Col>
+              <Col md={6}>
                 {progressData.map((progress) => (
                   <TrackVisibility once key={progress.id} className="progress-wrapper">
                     <Skill progress={progress} />
                   </TrackVisibility>
                 ))}
-              </div>
-            </div>
+              </Col>
+            </Row>
           </BubbleDialogue>
         </Col>
       </Row>
 
       <div className="spacer" data-height="70" />
-      <div className="row fix-spacing">
+      <Row className="fix-spacing">
         {counterData.map((counter) => (
-          <div key={counter.id} className="col-md-3 col-sm-6">
+          <Col key={counter.id} md={3} sm={6}>
             <TrackVisibility once>
               <Counter counterItem={counter} />
             </TrackVisibility>
-          </div>
+          </Col>
         ))}
-      </div>
+      </Row>
     </Container>
   </AboutWrapper>
 );

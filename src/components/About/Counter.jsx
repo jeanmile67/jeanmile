@@ -4,28 +4,19 @@ import CountUp from 'react-countup';
 import styled from 'styled-components';
 
 const FactItem = styled.div`
+  display: flex;
+  align-items: center;
+
   color: ${themeGet('color.white', '#fff')};
 
-  .details {
-    margin-left: 60px;
-  }
-
   svg {
-    color: #dedeea;
-    float: left;
+    margin-right: 20px;
+    color: ${themeGet('color.white', '#fff')};
   }
+`;
 
-  .number {
-    font-size: 30px;
-
-    em {
-      font-style: normal;
-    }
-  }
-
-  p {
-    font-size: 16px;
-  }
+const Number = styled.h3`
+  font-size: 30px;
 `;
 
 const Counter = ({ counterItem, isVisible }) => {
@@ -42,9 +33,7 @@ const Counter = ({ counterItem, isVisible }) => {
     <FactItem>
       {icon}
       <div className="details">
-        <h3 className="mb-0 mt-0 number">
-          <em className="count">{countQuery()}</em>
-        </h3>
+        <Number className="mb-0 mt-0 number">{countQuery()}</Number>
         <p className="mb-0">{title}</p>
       </div>
     </FactItem>
