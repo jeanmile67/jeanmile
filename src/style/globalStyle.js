@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     &:focus {
       outline: 0;
     }
-}
+  }
 
   @media (min-width: 1200px) {
     .container {
@@ -61,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
   .spacer {
     clear: both;
   
-  
     &[data-height='60'] {
       height: 60px;
     }
@@ -89,6 +88,10 @@ const GlobalStyle = createGlobalStyle`
 
   .shadow-dark {
     box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, .1);
+  }
+
+  p { 
+    color: ${themeGet('color.white', '#fff')};
   }
 `;
 

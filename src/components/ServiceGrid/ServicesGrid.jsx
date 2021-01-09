@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import PageTitle from '../PageTitle/PageTitle';
 import ServiceCard from './ServiceCard';
@@ -17,7 +18,7 @@ const servicesData = [
     icon: 'https://bolby-react.vercel.app/images/service-2.svg',
     title: 'Web Development',
     content: 'Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.',
-    color: '#F9D74C',
+    color: '',
     contentColor: 'dark',
   },
   {
@@ -32,25 +33,25 @@ const servicesData = [
 
 const ServicesGrid = () => (
   <section id="services">
-    <div className="container">
+    <Container>
       <PageTitle title="Services" />
-      <div className="row fix-spacing">
+      <Row className="fix-spacing">
         {servicesData.map((service) => (
-          <div className="col-md-4" key={service.id}>
+          <Col md={4} key={service.id}>
             <ServiceCard service={service} />
-          </div>
+          </Col>
         ))}
-      </div>
+      </Row>
       <div className="mt-5 text-center">
         <p className="mb-0">
-          Looking for a custom job?{' '}
-          <Link className="colorpink pointer" to="section-contact" spy smooth duration={500}>
-            Click here
-          </Link>{' '}
-          to contact me! 👋
+          {`Looking for a custom job? `}
+          <Link className="colorpink pointer" to="contact" spy smooth duration={500}>
+            {`Click here 👋 `}
+          </Link>
+          to contact me!
         </p>
       </div>
-    </div>
+    </Container>
   </section>
 );
 

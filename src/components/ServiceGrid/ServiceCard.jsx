@@ -1,33 +1,28 @@
+import { themeGet } from '@styled-system/theme-get';
 import React from 'react';
+import styled from 'styled-components';
+
+const ServiceCardWrapper = styled.div``;
+
+const ServiceTitle = styled.h3`
+  color: ${themeGet('color.white', '#fff')};
+`;
 
 const ServiceCard = ({ service }) => {
-  const { title, content, icon, color, contentColor } = service;
-  const hexToRgb = (hex) => {
-    const temp = hex
-      .replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (m, r, g, b) => '#' + r + r + g + g + b + b)
-      .substring(1)
-      .match(/.{2}/g)
-      .map((x) => parseInt(x, 16));
-    return temp.join(',');
-  };
-
+  const { title, content, icon, color } = service;
   return (
-    <div
-      className={
-        contentColor === 'light'
-          ? 'service-box rounded data-background p-5 text-center text-light shadow-blue'
-          : 'service-box rounded data-background p-5 text-center shadow-blue'
-      }
+    <ServiceCardWrapper
+      className="rounded data-background p-4 text-center"
       data-color="#6C6CE5"
       style={{
         background: color,
-        boxShadow: `0px 5px 20px 0px rgba(${hexToRgb(color)}, 0.5)`,
+        boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.15)`,
       }}
     >
       <img src={icon} alt={title} />
-      <h3 className="mb-3 mt-0">{title}</h3>
+      <ServiceTitle className="mb-2 mt-0">{title}</ServiceTitle>
       <p className="mb-0">{content}</p>
-    </div>
+    </ServiceCardWrapper>
   );
 };
 
