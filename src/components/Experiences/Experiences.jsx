@@ -20,7 +20,7 @@ const educationData = [
   },
   {
     id: 3,
-    title: 'Honours Degree',
+    title: 'DUT informatique',
     years: '2013 - 2009',
     content: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
   },

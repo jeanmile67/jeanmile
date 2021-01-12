@@ -24,13 +24,13 @@ const Hero = (props) => {
     >
       <div className="container">
         <div className="intro">
-          <img src="https://bolby-react.vercel.app/images/avatar-1.svg" alt="Bolby" className="mb-4" />
+          <img src="https://bolby-react.vercel.app/images/avatar-1.svg" alt="Jean-Michel LE" className="mb-4" />
 
-          <h1 className="mb-2 mt-0">Bolby Doe</h1>
+          <h1 className="mb-2 mt-0">Jean-Michel LE</h1>
           <p>
             I'm a{' '}
             <Typed
-              strings={['UI/UX designer ', 'Front-End developer', 'Photography lover']}
+              strings={['Back-End developer', 'Front-End developer', 'Photography lover']}
               typeSpeed={70}
               backSpeed={40}
               loop

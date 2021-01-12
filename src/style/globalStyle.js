@@ -18,8 +18,9 @@ const GlobalStyle = createGlobalStyle`
     @include transition(.3s);
 
     &:hover {
-      color: ${themeGet('color.dark', '#353353')};
+      color: ${themeGet('color.white', '#fff')};
       text-decoration: none;
+      cursor: pointer;
     }
 
     &:focus {

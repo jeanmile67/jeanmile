@@ -40,8 +40,10 @@
     "react-on-screen": "^2.1.1",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.1",
+    "react-spring": "^8.0.27",
     "react-typed": "^1.2.0",
     "react-typography": "^0.16.19",
+    "react-visibility-sensor": "^5.1.1",
     "styled-components": "^5.1.1",
     "typography": "^0.16.19",
     "typography-theme-noriega": "^0.16.19"

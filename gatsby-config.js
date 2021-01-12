@@ -3,9 +3,9 @@ const config = require('./src/settings/siteConfig.js');
 module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl,
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jean-Michel LE | Developer`,
+    description: `Jean-Michel LE personal website`,
+    author: `@jeanmile`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
