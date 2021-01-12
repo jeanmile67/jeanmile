@@ -7,18 +7,18 @@ import ServiceCard from './ServiceCard';
 const servicesData = [
   {
     id: 1,
-    icon: 'https://bolby-react.vercel.app/images/service-1.svg',
+    icon: 'https://bolby-react.vercel.app/images/service-2.svg',
     title: 'UI/UX design',
     content: 'Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.',
-    color: '#6C6CE5',
     contentColor: 'light',
+    color: '#1f4068',
   },
   {
     id: 2,
-    icon: 'https://bolby-react.vercel.app/images/service-2.svg',
+    icon: 'https://bolby-react.vercel.app/images/service-1.svg',
     title: 'Web Development',
     content: 'Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.',
-    color: '',
+    color: '#e43f5a',
     contentColor: 'dark',
   },
   {
@@ -26,7 +26,7 @@ const servicesData = [
     icon: 'https://bolby-react.vercel.app/images/service-3.svg',
     title: 'Photography',
     content: 'Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.',
-    color: '#F97B8B',
+    color: '#162447',
     contentColor: 'light',
   },
 ];

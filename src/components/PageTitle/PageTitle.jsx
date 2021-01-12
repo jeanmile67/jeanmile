@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSpring, animated, config } from 'react-spring';
 import { themeGet } from '@styled-system/theme-get';
-import ScrollAnimation from 'react-animate-on-scroll';
 import styled from 'styled-components';
+import VisibilitySensor from 'react-visibility-sensor';
 
-const SectionTitle = styled.h2`
+const SectionTitle = styled(animated.h2)`
   color: ${themeGet('color.white', '#fff')};
   font-size: 36px;
   margin: 0;
   margin-left: 14px;
   position: relative;
+  margin-bottom: 60px;
 
   &:before {
     content: '';
@@ -22,13 +24,31 @@ const SectionTitle = styled.h2`
   }
 `;
 
-const PageTitle = ({ title }) => (
-  <>
-    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce>
-      <SectionTitle className="section-title">{title}</SectionTitle>
-    </ScrollAnimation>
-    <div className="spacer" data-height="60" />
-  </>
-);
+const FadeInDirection = ({ isVisible, children }) => {
+  const spring = useSpring({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateX(0px)' : 'translateX(-200px)',
+  });
+
+  return (
+    <SectionTitle style={spring} className="section-title">
+      {children}
+    </SectionTitle>
+  );
+};
+
+const PageTitle = ({ title }) => {
+  const [isVisible, setVisibility] = useState(false);
+
+  const onChange = (visiblity) => visiblity && setVisibility(visiblity);
+
+  return (
+    <div>
+      <VisibilitySensor onChange={onChange}>
+        <FadeInDirection isVisible={isVisible}>{title}</FadeInDirection>
+      </VisibilitySensor>
+    </div>
+  );
+};
 
 export default PageTitle;

@@ -9,10 +9,10 @@ import AboutWrapper, { BubbleDialogue } from './About.style';
 import StyledButton from '../global/StyledButton';
 
 const aboutContent = {
-  name: 'Bolby',
+  name: 'Jean-Michel',
   avatarImage: 'https://bolby-react.vercel.app/images/avatar-2.svg',
-  content:
-    'I am Bolby Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at WordPress.',
+  content: `I am Jean-Michel LE, web developer from Lyon, France. 
+    I have rich experience in web site design and building and customization, also I am good at WordPress.`,
 };
 
 const progressData = [
