@@ -1,8 +1,23 @@
-import { themeGet } from '@styled-system/theme-get';
 import React from 'react';
+import { themeGet } from '@styled-system/theme-get';
 import styled from 'styled-components';
 
-const ServiceCardWrapper = styled.div``;
+const ServiceCardWrapper = styled.div`
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+`;
 
 const ServiceTitle = styled.h3`
   color: ${themeGet('color.white', '#fff')};

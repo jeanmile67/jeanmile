@@ -35,15 +35,12 @@ const aninMouse = keyframes`
 	0% {
 		top: 29%;
 	}
-
 	15% {
 		top: 50%;
 	}
-
 	50% {
 		top: 50%;
 	}
-
 	100% {
 		top: 29%;
 	}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSpring, animated, config } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
 import { themeGet } from '@styled-system/theme-get';
 import styled from 'styled-components';
 import VisibilitySensor from 'react-visibility-sensor';
@@ -24,7 +24,7 @@ const SectionTitle = styled(animated.h2)`
   }
 `;
 
-const FadeInDirection = ({ isVisible, children }) => {
+const AnimatedTitle = ({ isVisible, children }) => {
   const spring = useSpring({
     opacity: isVisible ? 1 : 0,
     transform: isVisible ? 'translateX(0px)' : 'translateX(-200px)',
@@ -43,11 +43,11 @@ const PageTitle = ({ title }) => {
   const onChange = (visiblity) => visiblity && setVisibility(visiblity);
 
   return (
-    <div>
+    <>
       <VisibilitySensor onChange={onChange}>
-        <FadeInDirection isVisible={isVisible}>{title}</FadeInDirection>
+        <AnimatedTitle isVisible={isVisible}>{title}</AnimatedTitle>
       </VisibilitySensor>
-    </div>
+    </>
   );
 };
 
