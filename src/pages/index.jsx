@@ -3,6 +3,7 @@ import ReactCursorPosition from 'react-cursor-position';
 import { Element } from 'react-scroll';
 import About from '../components/About/About';
 import Experiences from '../components/Experiences/Experiences';
+import Education from '../components/Education/Education';
 import Hero from '../components/Hero/Hero';
 import Header from '../components/Layouts/Header';
 import Layout from '../components/Layouts/Layout';
@@ -67,6 +68,9 @@ const IndexPage = () => {
           <Element name="experiences">
             <Experiences />
           </Element>
+          {/* <Element name="education">
+            <Education />
+          </Element> */}
           <Element name="works">
             <Works />
           </Element>
