@@ -22,9 +22,7 @@ const Timeline = ({ items, icon }) => (
   <TimelineWrapper className="p-4">
     <VerticalLine />
     {items.map((item) => (
-      // <ScrollAnimation key={education.id} animateIn="fadeInUp" animateOut="fadeInOut" animateOnce>
       <TimelineItem item={item} icon={icon} />
-      // </ScrollAnimation>
     ))}
   </TimelineWrapper>
 );

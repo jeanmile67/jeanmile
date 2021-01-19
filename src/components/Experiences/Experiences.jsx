@@ -8,21 +8,27 @@ import ExperiencesWrapper from './Experiences.style';
 const educationData = [
   {
     id: 1,
-    title: 'Acamedic Degree',
-    years: '2019 - Present',
+    title: 'Master 2 professionnel Informatique TI',
+    years: 'Juin 2019',
     content: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
+    location: 'Université Claude Bernard, Lyon (France)',
+    website: 'https://iutrs.unistra.fr/',
   },
   {
     id: 2,
-    title: 'Bachelor’s Degree',
-    years: '2017 - 2013',
+    title: 'Licence Mathématique & Informatique',
+    years: '2010 - 2012',
     content: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
+    location: 'UFR Mathématique et Informatique, Strasbourg (France)',
+    website: 'https://iutrs.unistra.fr/',
   },
   {
     id: 3,
     title: 'DUT informatique',
-    years: '2013 - 2009',
-    content: 'Lorem ipsum dolor sit amet quo ei simul congue exerci ad nec admodum perfecto.',
+    years: '2006 - 2008',
+    content: 'Le DUT Informatique est un diplôme universitaire national à bac+2',
+    location: 'IUT Robert Schuman, Illkirch (France)',
+    website: 'https://iutrs.unistra.fr/',
   },
 ];
 

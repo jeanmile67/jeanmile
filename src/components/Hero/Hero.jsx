@@ -30,7 +30,7 @@ const Hero = (props) => {
           <p>
             I'm a{' '}
             <Typed
-              strings={['Back-End developer', 'Front-End developer', 'Photography lover']}
+              strings={['Scala Back-End developer', 'React Front-End developer', 'Raspberry Pi lover ❤️']}
               typeSpeed={70}
               backSpeed={40}
               loop

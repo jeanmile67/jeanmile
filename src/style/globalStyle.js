@@ -34,11 +34,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  // @media (min-width: 1366px) {
-  //   .container {
-  //     max-width: 1080px;
-  //   }
-  // }
+  @media (min-width: 1366px) {
+    .container {
+      max-width: 1080px;
+    }
+  }
 
   section {
     background: ${themeGet('color.dark', '#353353')};
