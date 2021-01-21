@@ -75,13 +75,17 @@ const Logo = styled.div`
   }
 `;
 
+const InfoTimeLine = styled.div`
+  flex-grow: 2;
+`;
+
 const TimelineItem = ({ item, icon }) => {
   const { years, title, content, location, website, logo } = item;
 
   return (
     <TimelineItemWrapper key={item.id}>
       {icon}
-      <div>
+      <InfoTimeLine>
         <Time>{years}</Time>
         <h3 className="title">{title}</h3>
         <p>{content}</p>
@@ -89,7 +93,7 @@ const TimelineItem = ({ item, icon }) => {
           <MapPin size={25} />
           <Link to={website}>{location}</Link>
         </Place>
-      </div>
+      </InfoTimeLine>
       <Logo>
         <img src={logo} alt="logo" />
       </Logo>

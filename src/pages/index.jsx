@@ -68,9 +68,9 @@ const IndexPage = () => {
           <Element name="experiences">
             <Experiences />
           </Element>
-          {/* <Element name="education">
+          <Element name="education">
             <Education />
-          </Element> */}
+          </Element>
           <Element name="works">
             <Works />
           </Element>
