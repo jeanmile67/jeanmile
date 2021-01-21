@@ -21,7 +21,7 @@ export const VerticalLine = styled.span`
 const Timeline = ({ items, icon }) => (
   <TimelineWrapper className="p-4">
     <VerticalLine />
-    {items.map((item) => (
+    {items.reverse().map((item) => (
       <TimelineItem item={item} icon={icon} />
     ))}
   </TimelineWrapper>
