@@ -60,8 +60,9 @@ const PortfolioItemWrapper = styled.div`
 `;
 
 export const PortfolioThumb = styled.div`
-  overflow: hidden;
   img {
+    width: 100%;
+    height: 100%;
     margin-bottom: 0px;
   }
 `;

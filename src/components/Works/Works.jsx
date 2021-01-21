@@ -8,14 +8,16 @@ const allData = [
     id: 1,
     title: 'Project Managment Illustration',
     category: 'art',
-    image: 'https://bolby-react.vercel.app/images/works/1.svg',
+    image:
+      'https://scontent-hkg4-2.xx.fbcdn.net/v/t1.0-9/10407307_564878916976193_8583747059686537882_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=UV89fbhkg0UAX-7fOVM&_nc_ht=scontent-hkg4-2.xx&oh=aa39dc1024e859aa506c7a3735541e2e&oe=602D6AF4',
     popupLink: ['https://bolby-react.vercel.app/images/works/1.svg'],
   },
   {
     id: 2,
     title: 'Guest App Walkthrough Screens',
     category: 'creative',
-    image: 'https://bolby-react.vercel.app/images/works/2.svg',
+    image:
+      'https://scontent-hkg4-1.xx.fbcdn.net/v/t1.0-9/67887097_2871052916244173_5401551300393435136_o.jpg?_nc_cat=105&ccb=2&_nc_sid=2c4854&_nc_ohc=Dvl9NQcv-4AAX-xX9mq&_nc_ht=scontent-hkg4-1.xx&oh=57c99b6fb7cbe4f64a695cde3a2892f7&oe=602FE29F',
     popupLink: [
       'https://bolby-react.vercel.app/images/works/2.svg',
       'https://bolby-react.vercel.app/images/works/5.svg',
