@@ -26,6 +26,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/i18n`,
+        languages: [`en`, `fr`],
+        defaultLanguage: `en`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
