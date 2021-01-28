@@ -1,5 +1,6 @@
 import React from 'react';
 import TrackVisibility from 'react-on-screen';
+import { FormattedMessage, useIntl } from 'gatsby-plugin-intl';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Anchor, Award, Coffee, Users } from 'react-feather';
 import Skill from './Skill';
@@ -8,11 +9,8 @@ import PageTitle from '../PageTitle/PageTitle';
 import AboutWrapper, { BubbleDialogue } from './About.style';
 import StyledButton from '../global/StyledButton';
 
-const aboutContent = {
-  name: 'Jean-Michel',
+const aboutData = {
   avatarImage: 'https://bolby-react.vercel.app/images/avatar-2.svg',
-  content: `I am Jean-Michel LE, web developer from Lyon, France. 
-    I have rich experience in web site design and building and customization, also I am good at WordPress.`,
 };
 
 const progressData = [
@@ -63,52 +61,58 @@ const counterData = [
   },
 ];
 
-const About = () => (
-  <AboutWrapper id="about">
-    <Container>
-      <PageTitle title="About Me" />
-      <Row>
-        <Col md={3}>
-          <div className="text-center text-md-left">
-            <img src={aboutContent.avatarImage} alt={aboutContent.name} />
-          </div>
-          <div className="spacer d-md-none d-lg-none" data-height="30" />
-        </Col>
+const About = () => {
+  const intl = useIntl();
 
-        <Col md={9}>
-          <BubbleDialogue className="rounded shadow-dark padding-30">
-            <Row>
-              <Col md={6}>
-                <p>{aboutContent.content}</p>
-                <div className="mt-3">
-                  <StyledButton msg="Download CV" />
-                </div>
-                <div className="spacer d-md-none d-lg-none" data-height="30" />
-              </Col>
-              <Col md={6}>
-                {progressData.map((progress) => (
-                  <TrackVisibility once key={progress.id} className="progress-wrapper">
-                    <Skill progress={progress} />
-                  </TrackVisibility>
-                ))}
-              </Col>
-            </Row>
-          </BubbleDialogue>
-        </Col>
-      </Row>
-
-      <div className="spacer" data-height="70" />
-      <Row className="fix-spacing">
-        {counterData.map((counter) => (
-          <Col key={counter.id} md={3} sm={6}>
-            <TrackVisibility once>
-              <Counter counterItem={counter} />
-            </TrackVisibility>
+  return (
+    <AboutWrapper id="about">
+      <Container>
+        <PageTitle title={intl.formatMessage({ id: 'about.pageTitle' })} />
+        <Row>
+          <Col md={3}>
+            <div className="text-center text-md-left">
+              <img src={aboutData.avatarImage} alt={intl.formatMessage({ id: 'about.name' })} />
+            </div>
+            <div className="spacer d-md-none d-lg-none" data-height="30" />
           </Col>
-        ))}
-      </Row>
-    </Container>
-  </AboutWrapper>
-);
+
+          <Col md={9}>
+            <BubbleDialogue className="rounded shadow-dark padding-30">
+              <Row>
+                <Col md={6}>
+                  <p>
+                    <FormattedMessage id="about.content" />
+                  </p>
+                  <div className="mt-3">
+                    <StyledButton msg="Download CV" />
+                  </div>
+                  <div className="spacer d-md-none d-lg-none" data-height="30" />
+                </Col>
+                <Col md={6}>
+                  {progressData.map((progress) => (
+                    <TrackVisibility once key={progress.id} className="progress-wrapper">
+                      <Skill progress={progress} />
+                    </TrackVisibility>
+                  ))}
+                </Col>
+              </Row>
+            </BubbleDialogue>
+          </Col>
+        </Row>
+
+        <div className="spacer" data-height="70" />
+        <Row className="fix-spacing">
+          {counterData.map((counter) => (
+            <Col key={counter.id} md={3} sm={6}>
+              <TrackVisibility once>
+                <Counter counterItem={counter} />
+              </TrackVisibility>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </AboutWrapper>
+  );
+};
 
 export default About;

@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import { Award, Briefcase, Edit, Heart, Home, Layers, MessageCircle, UserCheck } from 'react-feather';
 import HeaderWrapper from './Header.style';
 import Logo from '../global/Logo';
+import LangPicker from '../LangPicker/LangPicker';
 
 const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
   const handleClasses = () => {
@@ -70,6 +71,9 @@ const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
                 <MessageCircle />
                 Contact
               </Link>
+            </li>
+            <li>
+              <LangPicker />
             </li>
           </ul>
         </nav>

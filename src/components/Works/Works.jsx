@@ -6,7 +6,7 @@ import WorksWrapper, { PortfolioWrapper } from './Works.style';
 const allData = [
   {
     id: 1,
-    title: 'Project Managment Illustration',
+    title: 'Inova software',
     category: 'art',
     image:
       'https://scontent-hkg4-2.xx.fbcdn.net/v/t1.0-9/10407307_564878916976193_8583747059686537882_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=UV89fbhkg0UAX-7fOVM&_nc_ht=scontent-hkg4-2.xx&oh=aa39dc1024e859aa506c7a3735541e2e&oe=602D6AF4',
@@ -96,10 +96,12 @@ const allData = [
   },
   {
     id: 13,
-    title: 'Delivery App Wireframe',
+    title: 'Ikos',
     category: 'branding',
-    image: 'https://bolby-react.vercel.app/images/works/4.svg',
+    image:
+      'https://www.solutionsimmobilierbysoprasteria.com/wp-content/uploads/2018/10/ikos-sopra-steria-immobilier-1.jpg',
     popupLink: ['images/works/4.svg'],
+    link: 'https://www.solutionsimmobilierbysoprasteria.com/plateforme/',
   },
 ];
 
