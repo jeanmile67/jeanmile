@@ -43,13 +43,6 @@ const IndexPage = () => {
     setToggleMenu(!toggleMenu);
   };
 
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('.content-2')) {
-      setToggleMenu(false);
-    }
-  });
-  document.body.classList.add('dark');
-
   return (
     <>
       <PageMetadata />

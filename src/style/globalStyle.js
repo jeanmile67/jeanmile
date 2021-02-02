@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import transition from './transitionStyle';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: ${themeGet('color.pink', '#FF4C60')};
     outline: 0;
-    @include transition(.3s);
+    ${transition(0.2)}
 
     &:hover {
       color: ${themeGet('color.white', '#fff')};
@@ -40,14 +41,46 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  @media only screen and (max-width: 991px) {
+    header.desktop-header-1 {
+      -webkit-transform: translateX(-290px);
+      -moz-transform: translateX(-290px);
+      -ms-transform: translateX(-290px);
+      -o-transform: translateX(-290px);
+      transform: translateX(-290px);
+    }
+    header.mobile-header-1 {
+      display: block;
+    }
+
+    main {
+      margin-left: 290px;
+    }
+
+    header.desktop-header-2 {
+      -webkit-transform: translateX(-110px);
+      -moz-transform: translateX(-110px);
+      -ms-transform: translateX(-110px);
+      -o-transform: translateX(-110px);
+      transform: translateX(-110px);
+    }
+    header.mobile-header-2 {
+      display: block;
+    }
+    
+    .desktop-header-3 .nav-link {
+      padding: 7px 0;
+    }
+  }
+
   section {
     background: ${themeGet('color.dark', '#353353')};
     padding-top: 110px;
   }
 
-  main.content {
+  main {
     margin-left: 290px;
-    @include transition(.3s);
+    ${transition(0.2)}
   
     &.open {
       opacity: .8;

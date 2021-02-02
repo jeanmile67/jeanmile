@@ -10,7 +10,7 @@ const Layout = ({ children }) => (
     <TypographyStyle typography={typography} />
     <GoogleFont typography={typography} />
     <GlobalStyle />
-    <main>{children}</main>
+    {children}
   </ThemeProvider>
 );
 

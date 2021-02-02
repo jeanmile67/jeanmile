@@ -1,15 +1,13 @@
 import React from 'react';
 import { themeGet } from '@styled-system/theme-get';
 import styled from 'styled-components';
+import transition from '../../style/transitionStyle';
 
 const ServiceCardWrapper = styled.div`
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  ${transition(0.2)}
 
   &:hover {
     cursor: pointer;

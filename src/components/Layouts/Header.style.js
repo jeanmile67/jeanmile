@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
+import transition from '../../style/transitionStyle';
 
 const HeaderWrapper = styled.header`
   color: ${themeGet('color.white', '#fff')};
@@ -20,7 +21,7 @@ const HeaderWrapper = styled.header`
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
-  @include transition(0.3s);
+  ${transition(0.3)}
 
   &.open {
     -webkit-transform: translateX(0);
@@ -28,6 +29,7 @@ const HeaderWrapper = styled.header`
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
+    ${transition(0.3)}
   }
 
   .site-logo {
@@ -57,7 +59,7 @@ const HeaderWrapper = styled.header`
     padding: 8px 0;
     position: relative;
     list-style: none;
-    @include transition(0.2s);
+    ${transition(0.3)}
 
     a,
     button {
@@ -88,9 +90,7 @@ const HeaderWrapper = styled.header`
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    ${transition(0.3)}
     -webkit-backface-visibility: hidden;
   }
 
@@ -116,7 +116,7 @@ const HeaderWrapper = styled.header`
   }
 
   .vertical-menu li .nav-link.active {
-    color: $coloryellow;
+    color: ${themeGet('color.yellow', '#FFD15C')};
   }
 
   .submenu {
@@ -172,81 +172,83 @@ const HeaderWrapper = styled.header`
       color: $colorpink;
     }
   }
+`;
 
-  header.mobile-header-1 {
-    background: $colordark;
-    display: none;
-    padding: 10px 0;
-    @include transition(0.3s);
+export const MobileHeaderWrapper = styled.div`
+  background: ${themeGet('color.dark', '#353353')};
+  padding: 10px 0;
 
-    &.open {
-      -webkit-transform: translateX(290px);
-      -moz-transform: translateX(290px);
-      -ms-transform: translateX(290px);
-      -o-transform: translateX(290px);
-      transform: translateX(290px);
+  .container {
+    margin-left: 10px;
+  }
+
+  &.open {
+    -webkit-transform: translateX(290px);
+    -moz-transform: translateX(290px);
+    -ms-transform: translateX(290px);
+    -o-transform: translateX(290px);
+    transform: translateX(290px);
+  }
+
+  .menu-icon {
+    button {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      outline: 0;
+      height: 33px;
+      width: 33px;
     }
 
-    .menu-icon {
-      button {
-        background: transparent;
-        border: 0;
-        cursor: pointer;
-        outline: 0;
-        height: 33px;
-        width: 33px;
-      }
+    span {
+      display: block;
+      background: ${themeGet('color.white', '#fff')};
+      border-radius: 5px;
+      height: 4px;
+      position: relative;
+      width: 30px;
 
-      span {
+      &:before {
+        content: '';
         display: block;
-        background: #fff;
+        background: ${themeGet('color.white', '#fff')};
         border-radius: 5px;
         height: 4px;
-        position: relative;
+        top: -10px;
+        position: absolute;
         width: 30px;
+      }
 
-        &:before {
-          content: '';
-          display: block;
-          background: #fff;
-          border-radius: 5px;
-          height: 4px;
-          top: -10px;
-          position: absolute;
-          width: 30px;
-        }
-
-        &:after {
-          content: '';
-          display: block;
-          background: #fff;
-          border-radius: 5px;
-          height: 4px;
-          top: 10px;
-          position: absolute;
-          width: 30px;
-        }
+      &:after {
+        content: '';
+        display: block;
+        background: ${themeGet('color.white', '#fff')};
+        border-radius: 5px;
+        height: 4px;
+        top: 10px;
+        position: absolute;
+        width: 30px;
       }
     }
+  }
 
-    .site-logo {
-      display: inline-block;
+  .site-logo {
+    display: inline-block;
 
-      img {
-        max-height: 30px;
-      }
+    img {
+      max-height: 30px;
     }
+  }
 
-    &.light {
-      background: #f9f9ff;
+  &.light {
+    background: #f9f9ff;
 
-      .menu-icon span {
-        background: $colordark;
+    .menu-icon span {
+      background: ${themeGet('color.dark', '#353353')};
 
-        &:before,
-        &:after {
-          background: $colordark;
-        }
+      &:before,
+      &:after {
+        background: ${themeGet('color.dark', '#353353')};
       }
     }
   }

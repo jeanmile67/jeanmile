@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Col, Container } from 'react-bootstrap';
 import PageTitle from '../PageTitle/PageTitle';
 import Portfolio from '../Portfolio/Portfolio';
 import WorksWrapper, { PortfolioWrapper } from './Works.style';
@@ -116,46 +117,16 @@ const Works = () => {
 
   return (
     <WorksWrapper id="works">
-      <div className="container">
+      <Container>
         <PageTitle title="Works" />
-        {/* <ScrollAnimation animateIn="fadeInUp" animateOut="fadeInOut" animateOnce={true}> */}
-        {/* <ul className="portfolio-filter list-inline">
-        {filters.map((filter) => (
-          <li className="list-inline-item" key={filter.id}>
-            <button
-              onClick={handleChange}
-              className={filter.text.toLowerCase() === activeFilter ? 'text-capitalize current' : 'text-capitalize'}
-            >
-              {filter.text}
-            </button>
-          </li>
-        ))}
-      </ul> */}
-        {/* </ScrollAnimation> */}
-        {/* End Portfolio Filters */}
-
-        {/* Start Portfolio Items */}
         <PortfolioWrapper className="row portfolio-wrapper">
           {visibleItems.map((item) => (
-            <div className="col-md-4 col-sm-6 grid-item" key={item.id}>
+            <Col md={4} sm={6} className="grid-item" key={item.id}>
               <Portfolio portfolio={item} />
-            </div>
+            </Col>
           ))}
         </PortfolioWrapper>
-        {/* End Portfolio Items */}
-
-        {/* <div className="load-more text-center mt-4">
-        <button className="btn btn-default" onClick={handleLoadmore} disabled={noMorePost ? 'disabled' : null}>
-          {noMorePost ? (
-            'No more items'
-          ) : (
-            <span>
-              <i className="fas fa-spinner"></i> Load more
-            </span>
-          )}
-        </button>
-      </div> */}
-      </div>
+      </Container>
     </WorksWrapper>
   );
 };

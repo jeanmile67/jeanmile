@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { Award, Briefcase, Edit, Heart, Home, Layers, MessageCircle, UserCheck } from 'react-feather';
-import HeaderWrapper from './Header.style';
+import HeaderWrapper, { MobileHeaderWrapper } from './Header.style';
 import Logo from '../global/Logo';
 import LangPicker from '../LangPicker/LangPicker';
+import { Container } from 'react-bootstrap';
 
 const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
   const handleClasses = () => {
-    let classes = 'desktop-header-2 d-flex align-items-start flex-column';
+    let classes = 'desktop-header-1 d-flex align-items-start flex-column';
     if (light & toggleMenu) {
       classes += ' light open';
     } else if (toggleMenu) {
@@ -17,7 +18,6 @@ const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
     }
     return classes;
   };
-
   const handleMobileClasses = () => {
     let classes = 'mobile-header-2';
     if (light & toggleMenu) {
@@ -32,6 +32,16 @@ const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
 
   return (
     <>
+      <MobileHeaderWrapper className={handleMobileClasses()}>
+        <Container>
+          <div className="menu-icon d-inline-flex mr-4">
+            <button onClick={headerToggler}>
+              <span />
+            </button>
+          </div>
+          <Logo logoSource={logoSource} />
+        </Container>
+      </MobileHeaderWrapper>
       <HeaderWrapper className={handleClasses()}>
         <Logo logoSource={logoSource} />
         <nav>
