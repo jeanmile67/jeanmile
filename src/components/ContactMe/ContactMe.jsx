@@ -73,68 +73,6 @@ const ContactMe = () => {
           </Col>
 
           <Col md={8}>
-            {/* <ContactMeForm id="contact-form" className="mt-6" onSubmit={submitHandler}>
-              <Row>
-                <Col md={6}>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="name"
-                      id="InputName"
-                      placeholder="Your name"
-                      onChange={handleChange}
-                      value={formdata.name}
-                    />
-                  </div>
-                </Col>
-
-                <Col md={6}>
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="InputEmail"
-                      name="email"
-                      placeholder="Email address"
-                      onChange={handleChange}
-                      value={formdata.email}
-                    />
-                  </div>
-                </Col>
-
-                <Col md={12}>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="InputSubject"
-                      name="subject"
-                      placeholder="Subject"
-                      onChange={handleChange}
-                      value={formdata.subject}
-                    />
-                  </div>
-                </Col>
-
-                <Col md={12}>
-                  <div className="form-group">
-                    <textarea
-                      name="message"
-                      id="InputMessage"
-                      className="form-control"
-                      rows="5"
-                      placeholder="Message"
-                      onChange={handleChange}
-                      value={formdata.message}
-                    />
-                  </div>
-                </Col>
-              </Row>
-              <button type="submit" name="submit" id="submit" value="Submit" className="btn btn-default">
-                Send Message
-              </button>
-            </ContactMeForm> */}
             <ContactMeForm>
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridEmail">

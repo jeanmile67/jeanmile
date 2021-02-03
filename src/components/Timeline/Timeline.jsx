@@ -22,7 +22,7 @@ const Timeline = ({ items, icon }) => (
   <TimelineWrapper className="p-4">
     <VerticalLine />
     {items.reverse().map((item) => (
-      <TimelineItem item={item} icon={icon} />
+      <TimelineItem key={item.id} item={item} icon={icon} />
     ))}
   </TimelineWrapper>
 );

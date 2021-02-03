@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import { Award, Briefcase, Edit, Heart, Home, Layers, MessageCircle, UserCheck } from 'react-feather';
-import HeaderWrapper, { MobileHeaderWrapper } from './Header.style';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Award, Briefcase, Heart, Home, Layers, MessageCircle, UserCheck } from 'react-feather';
+import HeaderWrapper, { MenuIcon, LogoCenter, MobileHeaderWrapper } from './Header.style';
 import Logo from '../global/Logo';
 import LangPicker from '../LangPicker/LangPicker';
-import { Container } from 'react-bootstrap';
 
 const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
   const handleClasses = () => {
@@ -33,17 +33,21 @@ const Header = ({ light, logoSource, toggleMenu, headerToggler }) => {
   return (
     <>
       <MobileHeaderWrapper className={handleMobileClasses()}>
-        <Container>
-          <div className="menu-icon d-inline-flex mr-4">
-            <button onClick={headerToggler}>
-              <span />
-            </button>
-          </div>
-          <Logo logoSource={logoSource} />
+        <Container fluid>
+          <Row>
+            <Col className="align-middle">
+              <MenuIcon onClick={headerToggler} size={40} />
+              <div className="navbar-brand">
+                <Logo />
+              </div>
+            </Col>
+          </Row>
         </Container>
       </MobileHeaderWrapper>
       <HeaderWrapper className={handleClasses()}>
-        <Logo logoSource={logoSource} />
+        <LogoCenter>
+          <Logo />
+        </LogoCenter>
         <nav>
           <ul className="vertical-menu scrollspy">
             <li>

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
+import { Menu } from 'react-feather';
 import transition from '../../style/transitionStyle';
 
 const HeaderWrapper = styled.header`
-  color: ${themeGet('color.white', '#fff')};
+  color: ${themeGet('color.white', '#ffffff')};
   border-right: solid 1px rgba(255, 255, 255, 0.1);
   background: ${themeGet('color.dark', '#353353')};
   padding: 50px 40px 40px;
@@ -175,12 +176,8 @@ const HeaderWrapper = styled.header`
 `;
 
 export const MobileHeaderWrapper = styled.div`
-  background: ${themeGet('color.dark', '#353353')};
-  padding: 10px 0;
-
-  .container {
-    margin-left: 10px;
-  }
+  padding: 20px 0;
+  display: block;
 
   &.open {
     -webkit-transform: translateX(290px);
@@ -188,56 +185,6 @@ export const MobileHeaderWrapper = styled.div`
     -ms-transform: translateX(290px);
     -o-transform: translateX(290px);
     transform: translateX(290px);
-  }
-
-  .menu-icon {
-    button {
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-      outline: 0;
-      height: 33px;
-      width: 33px;
-    }
-
-    span {
-      display: block;
-      background: ${themeGet('color.white', '#fff')};
-      border-radius: 5px;
-      height: 4px;
-      position: relative;
-      width: 30px;
-
-      &:before {
-        content: '';
-        display: block;
-        background: ${themeGet('color.white', '#fff')};
-        border-radius: 5px;
-        height: 4px;
-        top: -10px;
-        position: absolute;
-        width: 30px;
-      }
-
-      &:after {
-        content: '';
-        display: block;
-        background: ${themeGet('color.white', '#fff')};
-        border-radius: 5px;
-        height: 4px;
-        top: 10px;
-        position: absolute;
-        width: 30px;
-      }
-    }
-  }
-
-  .site-logo {
-    display: inline-block;
-
-    img {
-      max-height: 30px;
-    }
   }
 
   &.light {
@@ -252,6 +199,16 @@ export const MobileHeaderWrapper = styled.div`
       }
     }
   }
+`;
+
+export const MenuIcon = styled(Menu)`
+  color: ${themeGet('color.white', '#ffffff')};
+  cursor: pointer;
+`;
+
+export const LogoCenter = styled.div`
+  margin-left: 'auto';
+  margin-right: 'auto';
 `;
 
 export default HeaderWrapper;

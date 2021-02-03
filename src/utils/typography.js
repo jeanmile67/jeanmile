@@ -8,6 +8,10 @@ noriegaTheme.googleFonts = [
     name: 'Rubik',
     styles: ['400', '700'],
   },
+  {
+    name: 'Pridi',
+    styles: ['500', '700'],
+  },
 ];
 
 const typography = new Typography(noriegaTheme);

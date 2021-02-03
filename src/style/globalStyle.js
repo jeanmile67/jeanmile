@@ -13,6 +13,21 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  main.content {
+    margin-left: 290px;
+    ${transition(0.3)}
+  
+    &.open {
+      opacity: .8;
+      -webkit-transform: translateX(290px);
+      -moz-transform: translateX(290px);
+      -ms-transform: translateX(290px);
+      -o-transform: translateX(290px);
+      transform: translateX(290px);
+    }
+  }
+  
+
   a {
     color: ${themeGet('color.pink', '#FF4C60')};
     outline: 0;
@@ -49,12 +64,13 @@ const GlobalStyle = createGlobalStyle`
       -o-transform: translateX(-290px);
       transform: translateX(-290px);
     }
+    
     header.mobile-header-1 {
       display: block;
     }
 
-    main {
-      margin-left: 290px;
+    main.content {
+      margin-left: 0px;
     }
 
     header.desktop-header-2 {
@@ -63,9 +79,6 @@ const GlobalStyle = createGlobalStyle`
       -ms-transform: translateX(-110px);
       -o-transform: translateX(-110px);
       transform: translateX(-110px);
-    }
-    header.mobile-header-2 {
-      display: block;
     }
     
     .desktop-header-3 .nav-link {
@@ -79,10 +92,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   main {
-    margin-left: 290px;
     ${transition(0.2)}
-  
+    
     &.open {
+      margin-left: 290px;
       opacity: .8;
       -webkit-transform: translateX(290px);
       -moz-transform: translateX(290px);

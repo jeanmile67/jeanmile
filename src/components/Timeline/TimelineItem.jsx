@@ -91,7 +91,7 @@ const TimelineItem = ({ item, icon }) => {
         <p>{content}</p>
         <Place>
           <MapPin size={25} />
-          <Link to={website}>{location}</Link>
+          <a to={website}>{location}</a>
         </Place>
       </InfoTimeLine>
       <Logo>
