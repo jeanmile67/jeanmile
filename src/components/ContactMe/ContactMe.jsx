@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Col, Container, Row, Form } from 'react-bootstrap';
-import StyledButton from '../global/StyledButton';
+import StyledButton, { StyledLinkExt } from '../global/StyledButton';
 import PageTitle from '../PageTitle/PageTitle';
 import ContactMeInfo, { ContactMeForm } from './ContactMe.style';
 
@@ -96,7 +96,7 @@ const ContactMe = () => {
                 <Form.Control as="textarea" placeholder="You are awesome" rows={5} />
               </Form.Group>
 
-              <StyledButton msg="Send Message" />
+              <StyledLinkExt href="https://www.google.fr" msg="Send Message" />
               {handleAlerts()}
             </ContactMeForm>
           </Col>

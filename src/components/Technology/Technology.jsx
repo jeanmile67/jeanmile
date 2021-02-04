@@ -3,38 +3,46 @@ import { Col, Container, Row } from 'react-bootstrap';
 import PageTitle from '../PageTitle/PageTitle';
 import TechnologyWrapper, { LogoGrid } from './Technology.style';
 
-const brandlogoData = [
+const logoTechnoData = [
   {
     id: 1,
-    image: 'https://bolby-react.vercel.app/images/client-1-light.svg',
+    name: 'scala',
+    image: 'https://www.vectorlogo.zone/logos/scala-lang/scala-lang-ar21.svg',
   },
   {
     id: 2,
-    image: 'https://bolby-react.vercel.app/images/client-2-light.svg',
+    name: 'reactjs',
+    image: 'https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg',
   },
   {
     id: 3,
-    image: 'https://bolby-react.vercel.app/images/client-3-light.svg',
+    name: 'java',
+    image: 'https://www.vectorlogo.zone/logos/java/java-horizontal.svg',
   },
   {
     id: 4,
-    image: 'https://bolby-react.vercel.app/images/client-4-light.svg',
+    name: 'git',
+    image: 'https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg',
   },
   {
     id: 5,
-    image: 'https://bolby-react.vercel.app/images/client-5-light.svg',
+    name: 'mongodb',
+    image: 'https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg',
   },
   {
     id: 6,
-    image: 'https://bolby-react.vercel.app/images/client-6-light.svg',
+    name: 'apache kafka',
+    image: 'https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-ar21.svg',
   },
   {
     id: 7,
-    image: 'https://bolby-react.vercel.app/images/client-7-light.svg',
+    name: 'gatsby',
+    image: 'https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-ar21.svg',
   },
   {
     id: 8,
-    image: 'https://bolby-react.vercel.app/images/client-8-light.svg',
+    name: 'rasberryPi',
+    image: 'https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-ar21.svg',
   },
 ];
 
@@ -43,11 +51,11 @@ const Technology = () => (
     <Container>
       <PageTitle title="Technology" />
       <Row>
-        {brandlogoData.map((brandlogo) => (
-          <Col md={3} col={6} key={brandlogo.id}>
+        {logoTechnoData.map((logoTechno) => (
+          <Col md={3} col={6} key={logoTechno.id}>
             <LogoGrid>
               <div className="inner">
-                <img src={brandlogo.image} alt="client-name" />
+                <img src={logoTechno.image} alt={logoTechno.name} />
               </div>
             </LogoGrid>
           </Col>

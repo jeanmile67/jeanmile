@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
 import { Link } from 'react-scroll';
 
@@ -15,7 +15,7 @@ const ButtonPush = keyframes`
   }
 `;
 
-const StyledButtonWrapper = styled(Link)`
+const StyledLinkWrapper = css`
   border-radius: 30px;
   font-size: 16px;
   font-weight: 700;
@@ -33,8 +33,8 @@ const StyledButtonWrapper = styled(Link)`
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 
   &:hover {
-    color: ${themeGet('color.white', '#fff')};
     cursor: pointer;
+    color: ${themeGet('color.white', '#fff')};
     -webkit-animation-name: ${ButtonPush};
     animation-name: ${ButtonPush};
     -webkit-animation-duration: 0.3s;
@@ -44,14 +44,14 @@ const StyledButtonWrapper = styled(Link)`
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
+`;
 
-  &:focus {
-    box-shadow: none;
-  }
+const StyledButtonWrapper = styled(Link)`
+  ${StyledLinkWrapper}
+`;
 
-  &:focus {
-    outline: 0;
-  }
+const StyledLinkExtWrapper = styled.a`
+  ${StyledLinkWrapper}
 `;
 
 const StyledButton = ({ scrollTo, msg }) => (
@@ -59,5 +59,7 @@ const StyledButton = ({ scrollTo, msg }) => (
     {msg}
   </StyledButtonWrapper>
 );
+
+export const StyledLinkExt = ({ href, msg }) => <StyledLinkExtWrapper href={href}>{msg}</StyledLinkExtWrapper>;
 
 export default StyledButton;

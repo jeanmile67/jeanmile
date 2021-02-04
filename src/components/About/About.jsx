@@ -7,7 +7,7 @@ import Skill from './Skill';
 import Counter from './Counter';
 import PageTitle from '../PageTitle/PageTitle';
 import AboutWrapper, { BubbleDialogue } from './About.style';
-import StyledButton from '../global/StyledButton';
+import { StyledLinkExt } from '../global/StyledButton';
 
 const aboutData = {
   avatarImage: 'https://bolby-react.vercel.app/images/avatar-2.svg',
@@ -84,7 +84,7 @@ const About = () => {
                     <FormattedMessage id="about.content" />
                   </p>
                   <div className="mt-3">
-                    <StyledButton msg="Download CV" />
+                    <StyledLinkExt href="https://www.w3schools.com/tags/att_a_download.asp" msg="Download CV" />
                   </div>
                   <div className="spacer d-md-none d-lg-none" data-height="30" />
                 </Col>

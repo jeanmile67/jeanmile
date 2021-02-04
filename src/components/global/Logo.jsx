@@ -56,7 +56,7 @@ function Logo({ bootstrapNav }) {
   if (bootstrapNav) {
     return (
       // <Link className="navbar-brand" to="/">
-      <img src={LogoSrc} alt="Bolby" />
+      <img src={LogoSrc} alt="Jeanmile" />
       // </Link>
     );
   }
