@@ -1,7 +1,5 @@
 import React from 'react';
 import TrackVisibility from 'react-on-screen';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { FormattedMessage, useIntl } from 'gatsby-plugin-intl';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Anchor, Award, Coffee, Users } from 'react-feather';
@@ -65,17 +63,6 @@ const counterData = [
 
 const About = () => {
   const intl = useIntl();
-  const data = useStaticQuery(graphql`
-    query ProfilPictureAbout {
-      file(name: { eq: "profil" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `);
 
   return (
     <AboutWrapper id="about">
