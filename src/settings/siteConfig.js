@@ -1,7 +1,6 @@
 module.exports = {
-  siteTitle: 'NomAtrouver',
-  siteTitleAlt: 'NomAtrouver.com',
-  publisher: 'www.NomAtrouver.com',
+  siteTitle: 'Jean-Michel LE | Developer',
+  publisher: 'www.jeanmile.fr',
   siteDescription:
     'Vous souhaitez visiter le Vietnam ? Destination-Vietnam.com vous aide à mieux préparer votre séjour à travers son guide, nous vous partegerons la culture du pays avec nos articles',
   siteUrl: 'https://www.NomAtrouver.com', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/

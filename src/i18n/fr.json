@@ -1,4 +1,7 @@
 {
+  "hero" : {
+    "im": "Je suis un "
+  },
   "about" : {
     "pageTitle": "A propos de moi",
     "name": "Jean-Michel LE",

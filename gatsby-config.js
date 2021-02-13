@@ -3,8 +3,8 @@ const config = require('./src/settings/siteConfig.js');
 module.exports = {
   siteMetadata: {
     siteUrl: config.siteUrl,
-    title: `Jean-Michel LE | Developer`,
-    description: `Jean-Michel LE personal website`,
+    title: config.siteTitle,
+    description: config.siteDescription,
     author: `@jeanmile`,
   },
   plugins: [
@@ -42,7 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.svg`,
       },
     },
   ],

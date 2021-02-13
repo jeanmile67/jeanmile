@@ -4,8 +4,8 @@ import { themeGet } from '@styled-system/theme-get';
 const HeroWrapper = styled.section`
   position: relative;
   padding: 0;
-  height: 100vh;
-  min-height: 100vh;
+  height: 90vh;
+  min-height: 90vh;
 
   .intro {
     margin: auto;

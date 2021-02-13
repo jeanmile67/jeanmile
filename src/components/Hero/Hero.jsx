@@ -1,11 +1,15 @@
 import React from 'react';
 import Typed from 'react-typed';
+import { useIntl, FormattedMessage } from 'gatsby-plugin-intl';
 import { Dribbble, Facebook, Instagram, Twitter } from 'react-feather';
 import HeroWrapper, { ScrollDown } from './Hero.style';
 import StyledButton from '../global/StyledButton';
 import ScrollDownMouse from './ScrollDownMouse';
+import ProfilImg from '../global/ProfilImg';
 
 const Hero = (props) => {
+  const intl = useIntl();
+
   const { position, elementDimensions } = props;
   const { x, y } = position;
   const { height, width } = elementDimensions;
@@ -24,11 +28,10 @@ const Hero = (props) => {
     >
       <div className="container">
         <div className="intro">
-          <img src="https://bolby-react.vercel.app/images/avatar-1.svg" alt="Jean-Michel LE" className="mb-4" />
-
+          <ProfilImg />
           <h1 className="mb-2 mt-0">Jean-Michel LE</h1>
           <p>
-            I'm a{' '}
+            <FormattedMessage id="hero.im" />
             <Typed
               strings={['Scala Back-End developer', 'React Front-End developer', 'Raspberry Pi lover ❤️']}
               typeSpeed={70}
@@ -36,7 +39,6 @@ const Hero = (props) => {
               loop
             />
           </p>
-
           <ul className="social-icons light list-inline mb-0 mt-4">
             <li className="list-inline-item">
               <a href="!#">
@@ -59,7 +61,6 @@ const Hero = (props) => {
               </a>
             </li>
           </ul>
-
           <div className="mt-4">
             <StyledButton msg="Hire me" scrollTo="contact" />
           </div>
