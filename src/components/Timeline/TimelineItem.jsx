@@ -57,19 +57,22 @@ const Place = styled.p`
     margin-right: 10px;
     flex: none;
   }
+
+  a {
+    color: ${themeGet('color.pink', '#FF4C60')};
+  }
 `;
 
-const Logo = styled.div`
+const LogoTimeline = styled.div`
   display: flex;
   align-items: center;
   background-color: white;
   border-radius: 0.25rem !important;
+  width: 200px;
+  height: 200px;
 
   img {
     border-radius: 0.25rem !important;
-    min-width: 200px;
-    max-width: 200px;
-    max-height: 200px;
     padding: 10px;
     margin-bottom: 0px;
   }
@@ -94,9 +97,9 @@ const TimelineItem = ({ item, icon }) => {
           <a to={website}>{location}</a>
         </Place>
       </InfoTimeLine>
-      <Logo>
+      <LogoTimeline>
         <img src={logo} alt="logo" />
-      </Logo>
+      </LogoTimeline>
     </TimelineItemWrapper>
   );
 };

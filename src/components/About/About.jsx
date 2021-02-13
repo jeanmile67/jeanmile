@@ -8,6 +8,7 @@ import Counter from './Counter';
 import PageTitle from '../PageTitle/PageTitle';
 import AboutWrapper, { BubbleDialogue } from './About.style';
 import { StyledLinkExt } from '../global/StyledButton';
+import ProfilImg from '../global/ProfilImg';
 
 const aboutData = {
   avatarImage: 'https://bolby-react.vercel.app/images/avatar-2.svg',
@@ -70,13 +71,8 @@ const About = () => {
         <PageTitle title={intl.formatMessage({ id: 'about.pageTitle' })} />
         <Row>
           <Col md={3}>
-            <div className="text-center text-md-left">
-              {/* <Img
-                fixed={data.file.childImageSharp.fixed}
-                objectFit="cover"
-                objectPosition="50% 50%"
-                alt={intl.formatMessage({ id: 'about.name' })}
-              /> */}
+            <div className="text-right">
+              <ProfilImg maxWidth="150px" maxHeight="150px" />
             </div>
             <div className="spacer d-md-none d-lg-none" data-height="30" />
           </Col>

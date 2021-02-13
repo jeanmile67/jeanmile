@@ -8,9 +8,11 @@ import { themeGet } from '@styled-system/theme-get';
 const ProfilImgWrapper = styled(Img)`
   border-radius: 50%;
   border: 5px solid ${themeGet('color.default', '#454360')};
+  max-height: ${(props) => (props.maxHeight ? props.maxHeight : '400px')};
+  max-width: ${(props) => (props.maxWidth ? props.maxWidth : '400px')};
 `;
 
-const ProfilImg = () => {
+const ProfilImg = ({ maxWidth, maxHeight }) => {
   const intl = useIntl();
   const data = useStaticQuery(graphql`
     query ProfilPicture {
@@ -26,6 +28,8 @@ const ProfilImg = () => {
 
   return (
     <ProfilImgWrapper
+      maxWidth={maxWidth}
+      maxHeight={maxHeight}
       fixed={data.file.childImageSharp.fixed}
       objectFit="cover"
       objectPosition="50% 50%"
