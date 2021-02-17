@@ -61,8 +61,8 @@ const PortfolioItemWrapper = styled.div`
 
 export const PortfolioThumb = styled.div`
   img {
-    width: 100%;
-    height: 100%;
+    width: 330px;
+    height: 260px;
     margin-bottom: 0px;
   }
 `;
