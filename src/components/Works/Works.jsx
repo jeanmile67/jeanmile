@@ -106,7 +106,7 @@ const allData = [
   },
 ];
 
-const Works = () => {
+const Works = ({ items }) => {
   const [getAllItems] = useState(allData);
   const [dataVisibleCount, setDataVisibleCount] = useState(6);
   const [visibleItems, setVisibleItems] = useState([]);
@@ -120,7 +120,7 @@ const Works = () => {
       <Container>
         <PageTitle title="Works" />
         <PortfolioWrapper className="row portfolio-wrapper">
-          {visibleItems.map((item) => (
+          {items.map((item) => (
             <Col md={4} sm={6} className="grid-item" key={item.id}>
               <Portfolio portfolio={item} />
             </Col>

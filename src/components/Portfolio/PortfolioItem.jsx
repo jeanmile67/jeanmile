@@ -1,5 +1,6 @@
 import React from 'react';
 import { ZoomIn } from 'react-feather';
+import Img from 'gatsby-image';
 import PortfolioItemWrapper, {
   PortfolioCategory,
   PortfolioTitle,
@@ -9,8 +10,8 @@ import PortfolioItemWrapper, {
   PortfolioMask,
 } from './PortfolioItem.style';
 
-const PortfolioItem = ({ item }) => {
-  const { title, category, image } = item;
+const PortfolioItem = ({ title, category, image }) => {
+  console.log(title, category, image);
 
   return (
     <PortfolioItemWrapper className="shadow-dark">
@@ -22,7 +23,7 @@ const PortfolioItem = ({ item }) => {
         </PortfolioButton>
       </PortfolioDetails>
       <PortfolioThumb>
-        <img src={image} alt={title} />
+        <Img fluid={image} alt={title} />
         <PortfolioMask />
       </PortfolioThumb>
     </PortfolioItemWrapper>
