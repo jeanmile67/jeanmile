@@ -35,7 +35,7 @@ const Portfolio = ({ portfolio }) => {
   return (
     <>
       {/* <a href={link || '!#'} className="work-image" onClick={handleLightbox}> */}
-      <PortfolioItem item={portfolio} />
+      <PortfolioItem title={title} category={category} image={image.childImageSharp.fluid} />
       {/* <div className="portfolio-item rounded shadow-dark">
           <div className="details">
             <span className="term text-capitalize">{category}</span>

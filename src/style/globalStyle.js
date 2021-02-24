@@ -1,9 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'polished';
 import { themeGet } from '@styled-system/theme-get';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import transition from './transitionStyle';
 
 const GlobalStyle = createGlobalStyle`
+  ${normalize()}
+
   body {
     color: ${themeGet('color.white', '#fff')};
     background: ${themeGet('color.dark', '#353353')};

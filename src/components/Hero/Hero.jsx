@@ -62,7 +62,7 @@ const Hero = (props) => {
             </li>
           </ul>
           <div className="mt-4">
-            <StyledButton msg="Hire me" scrollTo="contact" />
+            <StyledButton msg="Contact Me" scrollTo="contact" />
           </div>
         </div>
 
