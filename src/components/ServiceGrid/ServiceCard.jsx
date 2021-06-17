@@ -1,5 +1,6 @@
 import React from 'react';
 import { themeGet } from '@styled-system/theme-get';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 import transition from '../../style/transitionStyle';
 
@@ -17,12 +18,18 @@ const ServiceCardWrapper = styled.div`
   }
 `;
 
+const ImgServiceWrapper = styled(Img)`
+  margin-left: 2em;
+  margin-right: 2em;
+`;
+
 const ServiceTitle = styled.h3`
   color: ${themeGet('color.white', '#fff')};
 `;
 
 const ServiceCard = ({ service }) => {
-  const { title, content, icon, color } = service;
+  const { title, content, image, color } = service;
+
   return (
     <ServiceCardWrapper
       className="rounded data-background p-4 text-center"
@@ -32,7 +39,7 @@ const ServiceCard = ({ service }) => {
         boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.15)`,
       }}
     >
-      <img src={icon} alt={title} />
+      <ImgServiceWrapper fluid={image.childImageSharp.fluid} alt={title} />
       <ServiceTitle className="mb-2 mt-0">{title}</ServiceTitle>
       <p className="mb-0">{content}</p>
     </ServiceCardWrapper>

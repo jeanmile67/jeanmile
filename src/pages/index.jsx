@@ -16,6 +16,22 @@ import Technology from '../components/Technology/Technology';
 
 export const homeQuery = graphql`
   query HomePageQuery {
+    servicesData: allServiceJson {
+      nodes {
+        id
+        title
+        content
+        color
+        theme
+        image {
+          childImageSharp {
+            fluid(maxWidth: 125) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
     portfolio: allPortfolioJson {
       nodes {
         id
@@ -34,6 +50,7 @@ export const homeQuery = graphql`
 `;
 
 const IndexPage = ({ data }) => {
+  const servicesData = data.servicesData.nodes;
   const portfolioItems = data.portfolio.nodes;
   const [toggleMenu, setToggleMenu] = useState(false);
   const headerToggler = (e) => {
@@ -54,7 +71,7 @@ const IndexPage = ({ data }) => {
             <About />
           </Element>
           <Element name="service">
-            <ServicesGrid />
+            <ServicesGrid servicesData={servicesData} />
           </Element>
           <Element name="experiences">
             <Experiences />
