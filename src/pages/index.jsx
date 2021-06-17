@@ -46,6 +46,7 @@ export const homeQuery = graphql`
         }
       }
     }
+    technos: all
   }
 `;
 
