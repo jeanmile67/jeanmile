@@ -4,12 +4,13 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
+import PropTypes from 'prop-types';
 
 const ProfilImgWrapper = styled(Img)`
   border-radius: 50%;
   border: 5px solid ${themeGet('color.default', '#454360')};
-  max-height: ${(props) => (props.maxHeight ? props.maxHeight : '400px')};
-  max-width: ${(props) => (props.maxWidth ? props.maxWidth : '400px')};
+  max-width: ${(props) => props.maxWidth}px;
+  max-height: ${(props) => props.maxHeight}px;
 `;
 
 const ProfilImg = ({ maxWidth, maxHeight }) => {
@@ -36,6 +37,16 @@ const ProfilImg = ({ maxWidth, maxHeight }) => {
       alt={intl.formatMessage({ id: 'about.name' })}
     />
   );
+};
+
+ProfilImg.propTypes = {
+  maxWidth: PropTypes.number,
+  maxHeight: PropTypes.number,
+};
+
+ProfilImg.defaultProps = {
+  maxWidth: 400,
+  maxHeight: 400,
 };
 
 export default ProfilImg;
