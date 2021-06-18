@@ -3,17 +3,15 @@ import { Col, Container, Row } from 'react-bootstrap';
 import PageTitle from '../PageTitle/PageTitle';
 import TechnologyWrapper, { LogoGrid } from './Technology.style';
 
-const Technology = ({ technos }) => (
+const Technology = ({ items }) => (
   <TechnologyWrapper id="about">
     <Container>
       <PageTitle title="Technologies" />
       <Row>
-        {technos.map((techno) => (
+        {items.map((techno) => (
           <Col md={3} col={6} key={techno.id}>
             <LogoGrid>
-              <div className="inner">
-                <img src={techno.image} alt={techno.name} />
-              </div>
+              <img src={techno.image.publicURL} alt={techno.name} />
             </LogoGrid>
           </Col>
         ))}

@@ -32,7 +32,7 @@ export const homeQuery = graphql`
         }
       }
     }
-    portfolio: allPortfolioJson {
+    portfolioData: allPortfolioJson {
       nodes {
         id
         title
@@ -46,12 +46,23 @@ export const homeQuery = graphql`
         }
       }
     }
+    technoData: allTechnoJson {
+      nodes {
+        id
+        name
+        image {
+          publicURL
+        }
+      }
+    }
   }
 `;
 
 const IndexPage = ({ data }) => {
   const servicesData = data.servicesData.nodes;
-  const portfolioItems = data.portfolio.nodes;
+  const portfolioItems = data.portfolioData.nodes;
+  const technoItems = data.technoData.nodes;
+
   const [toggleMenu, setToggleMenu] = useState(false);
   const headerToggler = (e) => {
     e.preventDefault();
@@ -83,7 +94,7 @@ const IndexPage = ({ data }) => {
             <Works items={portfolioItems} />
           </Element>
           <Element name="technology">
-            <Technology />
+            <Technology items={technoItems} />
           </Element>
           <Element name="contact">
             <ContactMe />
