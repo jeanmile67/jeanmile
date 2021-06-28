@@ -10,24 +10,20 @@ import PortfolioItemWrapper, {
   PortfolioMask,
 } from './PortfolioItem.style';
 
-const PortfolioItem = ({ title, category, image }) => {
-  console.log(title, category, image);
-
-  return (
-    <PortfolioItemWrapper className="shadow-dark">
-      <PortfolioDetails>
-        <PortfolioCategory>{category}</PortfolioCategory>
-        <PortfolioTitle>{title}</PortfolioTitle>
-        <PortfolioButton>
-          <ZoomIn size={25} />
-        </PortfolioButton>
-      </PortfolioDetails>
-      <PortfolioThumb>
-        <Img fluid={image} alt={title} />
-        <PortfolioMask />
-      </PortfolioThumb>
-    </PortfolioItemWrapper>
-  );
-};
+const PortfolioItem = ({ title, category, image }) => (
+  <PortfolioItemWrapper className="shadow-dark">
+    <PortfolioDetails>
+      <PortfolioCategory>{category}</PortfolioCategory>
+      <PortfolioTitle>{title}</PortfolioTitle>
+      <PortfolioButton>
+        <ZoomIn size={25} />
+      </PortfolioButton>
+    </PortfolioDetails>
+    <PortfolioThumb>
+      <Img fluid={image} alt={title} />
+      <PortfolioMask />
+    </PortfolioThumb>
+  </PortfolioItemWrapper>
+);
 
 export default PortfolioItem;
