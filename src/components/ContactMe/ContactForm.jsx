@@ -1,5 +1,6 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { Col, Form, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { themeGet } from '@styled-system/theme-get';
@@ -47,30 +48,57 @@ export const ContactFormWrapper = styled(Form)`
 
 const ContactForm = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = (data) => {
+    console.log(data);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(data)).toString(),
+    })
+      .then(() => console.log('Form successfully submitted'))
+      .catch((error) => alert(error));
+  };
 
   return (
-    <ContactFormWrapper onSubmit={handleSubmit(onSubmit)}>
+    <ContactFormWrapper onSubmit={handleSubmit(onSubmit)} data-netlify="true">
       <Form.Row>
         <Form.Group as={Col} controlId="formName">
           <Form.Label>Name</Form.Label>
-          <Form.Control type="text" placeholder="John Doe" {...register('name')} />
+          <Form.Control type="text" name="name" placeholder="John Doe" {...register('name', { required: true })} />
         </Form.Group>
 
         <Form.Group as={Col} controlId="formEmail">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="text" placeholder="john.doe@gmail.com" {...register('email')} />
+          <Form.Control
+            type="text"
+            name="email"
+            placeholder="john.doe@gmail.com"
+            {...register('email', { required: true })}
+          />
         </Form.Group>
       </Form.Row>
 
       <Form.Group controlId="formsubject">
         <Form.Label>Subject</Form.Label>
-        <Form.Control type="text" placeholder="Subject of your message" {...register('subject')} />
+        <Form.Control
+          type="text"
+          name="subject"
+          placeholder="Subject of your message"
+          {...register('subject', { required: true })}
+        />
       </Form.Group>
 
       <Form.Group controlId="formMessage">
         <Form.Label>Message</Form.Label>
-        <Form.Control as="textarea" type="text" placeholder="You are awesome" rows={5} {...register('message')} />
+        <Form.Control
+          as="textarea"
+          type="text"
+          name="message"
+          placeholder="You are awesome"
+          rows={5}
+          {...register('message', { required: true })}
+        />
       </Form.Group>
 
       <Button type="submit">Submit</Button>
