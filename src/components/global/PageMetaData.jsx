@@ -20,7 +20,7 @@ const SiteMetadata = ({ pathname }) => {
       {/* <meta property="og:locale" content={locale} /> */}
       <meta property="og:site_name" content={title} />
       {/* <meta property="og:image" content={`${siteUrl}${gatsbyIcon}`} /> */}
-      <meta property="og:image:alt" content="Gatsby Logo" />
+      <meta property="og:image:alt" content="Jeanmile Logo" />
       <meta property="og:image:width" content="512" />
       <meta property="og:image:height" content="512" />
 

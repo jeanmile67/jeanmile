@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Scala development",
+    "percantage": 85,
+    "progressColor": "#FFD15C"
+  },
+  {
+    "title": "UI/UX Design",
+    "percantage": 95,
+    "progressColor": "#FF4C60"
+  },
+  {
+    "title": "Photography",
+    "percantage": 70,
+    "progressColor": "#6C6CE5"
+  }
+]

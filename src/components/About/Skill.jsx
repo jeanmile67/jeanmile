@@ -43,23 +43,24 @@ const SkillWrapper = styled.div`
 
 const Skill = ({ progress, isVisible }) => {
   const { title, percantage, progressColor } = progress;
-  const winWidth = window.innerWidth;
+  // const winWidth = window.innerWidth;
+  // eslint-disable-next-line arrow-body-style
   const progressQuery = () => {
-    if (winWidth && winWidth > 767) {
-      return (
-        <div
-          className="progress-bar data-background"
-          style={
-            isVisible
-              ? {
-                  width: `${percantage}%`,
-                  background: progressColor,
-                }
-              : { width: 0, background: progressColor }
-          }
-        />
-      );
-    }
+    // if (winWidth && winWidth > 767) {
+    //   return (
+    //     <div
+    //       className="progress-bar data-background"
+    //       style={
+    //         isVisible
+    //           ? {
+    //               width: `${percantage}%`,
+    //               background: progressColor,
+    //             }
+    //           : { width: 0, background: progressColor }
+    //       }
+    //     />
+    //   );
+    // }
     return (
       <div
         className="progress-bar data-background"

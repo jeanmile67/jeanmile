@@ -11,13 +11,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Jean-Michel LE personal website`,
+        short_name: `jeanmile`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.svg`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-styled-components`,
