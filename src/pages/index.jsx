@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactCursorPosition from 'react-cursor-position';
 import { Element } from 'react-scroll';
 import { graphql } from 'gatsby';
 import About from '../components/About/About';
@@ -75,9 +74,7 @@ const IndexPage = ({ data }) => {
       <Layout>
         <Header toggleMenu={toggleMenu} headerToggler={headerToggler} />
         <main className={toggleMenu ? 'content open' : 'content'}>
-          <ReactCursorPosition>
-            <Hero />
-          </ReactCursorPosition>
+          <Hero />
           <Element name="about">
             <About />
           </Element>
